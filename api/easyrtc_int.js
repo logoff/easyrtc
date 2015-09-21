@@ -4462,7 +4462,7 @@ var Easyrtc = function() {
                self.webSocket = io.connect(serverPath, connectionOptions);
             } catch(socketErr) {
                errorCallback( self.errCodes.SYSTEM_ERROR,
-                     socketError.toString());
+                     socketErr.toString());
                return;
             }
             if (!self.webSocket) {
